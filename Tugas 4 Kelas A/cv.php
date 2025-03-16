@@ -16,6 +16,12 @@
                 <?php echo "Selamat datang, {$_SESSION["name"]}";?>
             </div>
             <div class="isi">
+                <?php 
+                    $profileImage = isset($_SESSION["profile-pic"]) ? $_SESSION["profile-pic"] : "images/default-profile.jpg";
+                ?>
+                <img src="<?php echo $profileImage; ?>" alt="Foto Profil" class="profile-img">
+            </div>
+            <div class="isi">
                 <label for="">Email:</label><br>
                 <?php echo $_SESSION["email"] ?>
             </div>
